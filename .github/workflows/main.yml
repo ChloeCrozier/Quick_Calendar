@@ -6,6 +6,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    node-version: '16'
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2

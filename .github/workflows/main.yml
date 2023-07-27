@@ -22,7 +22,8 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          npm ci  # If your project uses npm, otherwise, use yarn or any other package manager.
+          cd /var/www/projects/quick_calendar
+          npm install  # Install project dependencies
           npm run build  # Replace with your build command.
           cp -r ./build/* /var/www/html  # Assuming your web server root is /var/www/html
           sudo chown -R www-data:www-data /var/www/html  # Change ownership to the web server user.
